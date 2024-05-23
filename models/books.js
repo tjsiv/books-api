@@ -5,16 +5,15 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose
 
 //schema
-const booksSchema = new Schema({
-    title: {type: string, required: true},
-    description: string,
+const bookSchema = new Schema({
+    title:String,
+    description:String,
     year: Number,
     quantity: Number,
-    image: { type: String, default: 'http://placehold.it/500x500.png' }
+    image: String
 
 })
 
-const Book = mongoose.model('Book', booksSchema)
-
+const Book = mongoose.model('Book', bookSchema)
 
 module.exports = Book
